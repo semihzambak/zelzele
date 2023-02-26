@@ -47,7 +47,7 @@ export default function Row({ item }: Props) {
               onClick={() => {
                 setFilter({
                   ...filter,
-                  city: item.province || item.location,
+                  city: filter.city ? null : (item.province || item.location),
                 });
               }}
             >
