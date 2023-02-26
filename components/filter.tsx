@@ -7,14 +7,14 @@ export default function Filter() {
     typeof window !== "undefined" && document.body.clientWidth < 768;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-center bg-gradient-to-t from-zinc-400 pt-20 pb-10">
+    <div className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-center bg-gradient-to-t from-zinc-400 dark:from-zinc-900 pt-20 pb-10">
       {/* container */}
       <div className="flex flex-nowrap items-center justify-center gap-3">
         {/* city */}
         {filter?.city && (
           <button
             className="flex h-12 w-28 select-none items-center gap-1.5 rounded-full
-            bg-white px-4 font-semibold shadow-lg md:w-auto"
+            bg-white dark:bg-black px-4 font-semibold shadow-lg md:w-auto"
             onClick={() =>
               setFilter({
                 ...filter,
@@ -42,7 +42,7 @@ export default function Filter() {
         )}
 
         {/* filter */}
-        <div className="flex h-12 items-center rounded-full bg-white p-1 shadow-lg">
+        <div className="flex h-12 items-center rounded-full bg-white dark:bg-black p-1 shadow-lg">
           {[1, 4].map((i) => {
             const isSelected = filter.hide === i;
 
@@ -89,7 +89,7 @@ export default function Filter() {
 
         {/* refresh */}
         <button
-          className="flex h-12 w-12 shrink-0 cursor-pointer rounded-full bg-white p-1 shadow-lg"
+          className="flex h-12 w-12 shrink-0 cursor-pointer rounded-full bg-white dark:bg-black p-1 shadow-lg"
           onClick={fetchData}
           aria-label="Yenile"
         >

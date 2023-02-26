@@ -11,7 +11,7 @@ export default function Day({ date }: Props) {
   });
 
   return (
-    <div className="sticky top-0 z-20 bg-white px-4 py-2 shadow">
+    <div className="sticky top-0 z-20 bg-white px-4 py-2 shadow dark:bg-zinc-900 dark:text-zinc-400">
       <div className="mx-auto max-w-screen-md">
         <h5 className="font-medium uppercase opacity-80">
           {dateTime.toFormat("dd LLLL yyyy")}
