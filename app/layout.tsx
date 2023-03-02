@@ -39,7 +39,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  themeColor: "#ffffff",
   icons: {
     icon: "/icons-192.png",
     apple: "/icons-192.png",
